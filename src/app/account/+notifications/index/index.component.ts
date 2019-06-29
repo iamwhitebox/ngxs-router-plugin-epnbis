@@ -22,7 +22,7 @@ export class IndexComponent implements OnInit, OnDestroy {
     private store: Store,
     private actions$: Actions,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
 
@@ -36,12 +36,12 @@ export class IndexComponent implements OnInit, OnDestroy {
 
     // this.store.dispatch(new ACT.GetNotifications(null));
 
-   /**
-    * // When changing the list:
-    * this.itemEnterState = Math.random()
-    *   .toString(36)
-    *   .substring(2);
-    */
+    /**
+     * // When changing the list:
+     * this.itemEnterState = Math.random()
+     *   .toString(36)
+     *   .substring(2);
+     */
   }
 
   ngOnDestroy() {
