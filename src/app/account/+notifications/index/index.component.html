@@ -1,0 +1,8 @@
+<div *ngIf="notifications$ | async as notifications"
+  [ngClass]="['view_type-' + (view$ | async)]">
+
+  <p *ngFor="let notification of notifications">
+    {{ notification }}
+  </p>
+
+</div>
