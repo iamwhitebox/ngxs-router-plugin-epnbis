@@ -29,15 +29,16 @@ export class NotificationsState {
 
   @Action(ACT.GetNotifications)
   getNotifications({ patchState }: StateContext<NotificationsStateModel>, { payload }: ACT.GetNotifications) {
-    return observableOf(['Notification 1', 'Notification 2', 'Notification 3']).pipe(
-      tap(
-        response => {
-          patchState({
-            notifications: response
-          });
-        }
-      )
-    );
+    return observableOf(['Notification 1', 'Notification 2', 'Notification 3'])
+      .pipe(
+        tap(
+          response => {
+            patchState({
+              notifications: response
+            });
+          }
+        )
+      );
   }
 
   @Action(ACT.ClearNotifications)
